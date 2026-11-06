@@ -43,10 +43,19 @@ The instructions.
 
 ## Install
 
-Copy (or symlink) a skill's folder into your agent's skills folder:
+Copy (or symlink) a skill's folder into a skills folder your agent reads. The `SKILL.md` format is the same for every agent;
+only the folder differs.
 
-- Claude Code: `~/.claude/skills/<skill-name>/` for every project, or `.claude/skills/<skill-name>/` in one project.
-- Other agents: the folder their docs name for skills; the `SKILL.md` format is the same.
+- **Most agents** (Codex, Gemini CLI, GitHub Copilot, Cursor and others): `.agents/skills/<skill-name>/` in your project.
+- **Claude Code:** `.claude/skills/<skill-name>/` in your project, or `~/.claude/skills/<skill-name>/` for every project.
+- **For every project** in another agent: its user-level skills folder (for example `~/.gemini/skills/`,
+  `~/.copilot/skills/`); its docs name the path.
+
+To install all of them with the cross-agent skills CLI:
+
+```
+npx skills add maca134/dayz-skills
+```
 
 ## License
 
