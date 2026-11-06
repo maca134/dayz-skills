@@ -5,8 +5,15 @@ skills) loads when it works on a DayZ mod, such as writing Enforce Script, packi
 
 - **One folder per skill**, under `skills/`, each with a `SKILL.md`.
 - **Built for** DayZ 1.30.
-- No skills yet: the first ones are on the way.
 
+## Skills
+
+| Skill | Use it |
+|---|---|
+| [`dayz-enforce-script`](skills/dayz-enforce-script/SKILL.md) | Before writing or editing any DayZ `.c` script, when one fails to compile, or to explain a script error in the log |
+| [`dayz-persistence`](skills/dayz-persistence/SKILL.md) | Saving and loading item or entity state across restarts, or changing a mod's saved data |
+| [`dayz-player-lifecycle`](skills/dayz-player-lifecycle/SKILL.md) | Hooking a player's connect, spawn, respawn, death or disconnect |
+| [`dayz-server-config`](skills/dayz-server-config/SKILL.md) | Setting up a server or test server: parameters, `serverDZ.cfg`, profile logs, Central Economy files |
 ## Layout
 
 ```
@@ -40,3 +47,7 @@ Copy (or symlink) a skill's folder into your agent's skills folder:
 
 - Claude Code: `~/.claude/skills/<skill-name>/` for every project, or `.claude/skills/<skill-name>/` in one project.
 - Other agents: the folder their docs name for skills; the `SKILL.md` format is the same.
+
+## License
+
+MIT, see `LICENSE`.
